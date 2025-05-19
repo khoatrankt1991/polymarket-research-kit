@@ -1,4 +1,4 @@
-# Gas Optimization
+# UMA - Gas Optimization
 
 **Source**: [GasOptimizedUmaAdapter.sol](../../contracts//GasOptimizedUmaAdapter.sol)
 
