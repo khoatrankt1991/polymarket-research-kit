@@ -69,3 +69,22 @@ contract FPMMFactory {
        // ...implementation code...
    }
 }
+```
+
+## Benefits of the Factory & Clone Pattern:
+
+1. **Significant Gas Cost Reduction:**
+- Deploying a clone costs only ~10% of the gas compared to a full deployment
+- Only reference bytecode is stored on-chain
+
+2. **Higher Consistency:**
+- All markets use the same implementation code
+- Easier to update global parameters
+
+3. **Centralized Management with Decentralized Execution:**
+- Maintains independence of markets
+- But manages them easily through the Factory
+
+4. **Better Upgrade Capabilities:**
+- Can implement upgrades to the FPMM model from a central location
+- Supports multiple versions through multiple Factories
