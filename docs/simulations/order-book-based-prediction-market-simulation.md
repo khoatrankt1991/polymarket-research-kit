@@ -25,15 +25,15 @@ await conditionalTokens.splitPosition(
     usdc.address,            // Collateral token
     marketId,                // Market ID
     conditionId,             // Condition ID
-    [1, 1],                  // Partition (YES/NO)
+    [1, 2],                  // Partition (YES/NO)
     "10000000000"            // Amount of USDC
 );
 
-// LP receives 5,000 YES tokens and 5,000 NO tokens
+// LP receives 10,000 YES tokens and 10,000 NO tokens
 const lpYesBalance = await conditionalTokens.balanceOf(lp.address, yesTokenId);
 const lpNoBalance = await conditionalTokens.balanceOf(lp.address, noTokenId);
-// lpYesBalance = 5000
-// lpNoBalance = 5000
+// lpYesBalance = 10000
+// lpNoBalance = 10000
 ```
 
 ## 3. LP Places Initial Sell Orders via CtfExchange
@@ -130,7 +130,7 @@ await conditionalTokens.redeemPositions(
     usdc.address,
     marketId,
     conditionId,
-    [1, 0]                   // Only redeem YES tokens
+    [1]                   // Only redeem YES tokens
 );
 
 // Final results:
